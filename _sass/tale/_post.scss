@@ -27,6 +27,11 @@
     margin: 0 auto 3rem;
     width: 4rem;
   }
+    
+  &-tags {
+    text-align: center;
+    font-size: 0.8rem;
+  }
 
   p {
     margin: 0 0 1rem;
@@ -51,7 +56,4 @@
   }
 }
 
-.entry-tags {
-    text-align: center;
-    font-size: 0.8rem;
-}
+

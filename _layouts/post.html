@@ -19,7 +19,7 @@ layout: default
 
   <h1 class="post-title">{{ page.title }}</h1>
     
-  <p class="entry-tags">{% for tag in page.tags %}<a href="{{ '/tags' | prepend: site.baseurl }}#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</p>
+  <p class="post-tags">{% for tag in page.tags %}<a href="{{ '/tags' | prepend: site.baseurl }}#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</p>
     
   <div class="post-line"></div>
 
