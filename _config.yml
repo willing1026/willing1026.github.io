@@ -4,6 +4,9 @@ description:    "Minimal Jekyll theme for storytellers"
 #baseurl:        "/tale"
 url:            "https://willing1026.github.io"
 
+# google analytics
+google_analytics_id: UA-113210161-1
+
 # Author
 author:
   name:         Paycis
