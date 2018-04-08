@@ -5,7 +5,11 @@ author: "Paycis"
 tags: [markdown]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt ornare nibh, non elementum augue tempus eget. Pellentesque tempus scelerisque iaculis. Nullam interdum ultricies nibh quis sollicitudin. Donec ornare fermentum facilisis. Ut at sem ac sem imperdiet varius a eget tortor. Nam eu augue eget orci semper maximus in eget augue. Mauris ornare, nisl ut suscipit consectetur, mi quam interdum tellus, at rutrum quam eros ultrices mi.
+markdown 태그 연습하기
+> Example post를 따라 markdown Tag를 다양하게 적용해봤습니다.
+
+
+
 
 # Headers
 {% highlight markdown %}
@@ -47,6 +51,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
 - Citation: <cite>&mdash; Chester How</cite>
 
 # List
+하위항목 작성은 `Tab`을 이용!!
+
 {% highlight markdown %}
 1. ordered item1
     * test1
@@ -76,9 +82,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
         1. test1-3-1
             1. test1-3-1-1
                 1. test1-3-1-1-1
-2. ordered item2
-3. ordered item3
- 
 2. ordered item2
 3. ordered item3
 
