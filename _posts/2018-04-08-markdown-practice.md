@@ -7,10 +7,7 @@ tags: [markdown]
 
 markdown 태그 연습하기
 > Example post를 따라 markdown Tag를 다양하게 적용해봤습니다.
-
-
-
-
+                                        
 # Headers
 {% highlight markdown %}
 # H1
