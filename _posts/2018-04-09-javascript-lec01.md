@@ -46,25 +46,25 @@ tags: [javascript]
 자바스크립트에서 값으로 인식하는 종류는 아래와 같이 존재한다.
 
 1. 숫자(Number) : 정수 / 실수 / 무한대(Infinity) / NaN(Not a Number)
-{% highlight js  linenos %}
-10; 10.321; Infinity; NaN;
-//Not a Number는 해당값이 숫자가 아님을 나타냄
-{% endhighlight %}
+    {% highlight js  linenos %}
+    10; 10.321; Infinity; NaN;
+    //Not a Number는 해당값이 숫자가 아님을 나타냄
+    {% endhighlight %}
 
 2. 문자열(String) : 문자열을 나타내는 여러 방법 존재
-{% highlight js  linenos %}
-'안녕하세요'; //요즘에는 ""보단 ''를 많이 사용한다
-"안녕하세요";
-`안녕하세요`; //ES6, 문자열 내부에 변수(값)을 포함해서 작성할 수 있다.
-{% endhighlight %}
+    {% highlight js  linenos %}
+    '안녕하세요'; //요즘에는 ""보단 ''를 많이 사용한다
+    "안녕하세요";
+    `안녕하세요`; //ES6, 문자열 내부에 변수(값)을 포함해서 작성할 수 있다.
+    {% endhighlight %}
 
 3. 논리값(Boolean) : true, false
 
 4. 정의되지 않은 값(undefined) : 값을 담을 바구니(?)를 준비해놓고 값을 담기 전 상태. (값이 담겨있지않아 값의 종류를 알 수 없어)
-{% highlight js  linenos %}
-let name; //undefined 상태
-name = 'paycis'; //string으로 값의 종류가 정해짐
-{% endhighlight %}
+    {% highlight js  linenos %}
+    let name; //undefined 상태
+    name = 'paycis'; //string으로 값의 종류가 정해짐
+    {% endhighlight %}
 
 5. 값이 없는(null) : 변수(바구니)를 만들고 `null`이라는 빈 값을 할당 한 경우
     * null은 객체형 데이터(값)의 빈값을 의미
