@@ -1,7 +1,7 @@
 ---
 layout: post
 title: markdown 연습하기
-author: paycis
+author: "Paycis"
 tags: [markdown]
 ---
 
@@ -26,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
 
 # Text formatting
 
-{% highlight %}
+{% highlight markdown %}
 - **Bold**
 - _Italics_
 - ~~Strickethrough~~
@@ -47,7 +47,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
 - Citation: <cite>&mdash; Chester How</cite>
 
 # List
-{% highlight %}
+{% highlight markdown %}
 1. ordered item1
 2. ordered item2
 3. ordered item3<br>
@@ -74,10 +74,10 @@ _This is an image with a caption_
 # Code and Syntax Highlighting
 Use back-ticks for `inline code`. Multi-line code snippets are supported too through Pygments.
 
-{% highlight js lineos %}
+{% highlight js  lineos %}
 // Sample javascript code
 var s = "JavaScript syntax highlighting";
 alert(s);
 {% endhighlight %}
 
-<cite>The end</cite>
+_The end_
