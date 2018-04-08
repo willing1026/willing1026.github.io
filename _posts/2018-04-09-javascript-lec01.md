@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Javascript Lecture 복습 - 01 
-author : "Paycis"
+author: "Paycis"
 tags: [javascript]
 ---
 
@@ -49,14 +49,14 @@ tags: [javascript]
 {% highlight js  linenos %}
 10; 10.321; Infinity; NaN;
 //Not a Number는 해당값이 숫자가 아님을 나타냄
-{% endhighlight}
+{% endhighlight %}
 
 2. 문자열(String) : 문자열을 나타내는 여러 방법 존재
 {% highlight js  linenos %}
 '안녕하세요'; //요즘에는 ""보단 ''를 많이 사용한다
 "안녕하세요";
 `안녕하세요`; //ES6, 문자열 내부에 변수(값)을 포함해서 작성할 수 있다.
-{% endhighlight}
+{% endhighlight %}
 
 3. 논리값(Boolean) : true, false
 
@@ -64,7 +64,7 @@ tags: [javascript]
 {% highlight js  linenos %}
 let name; //undefined 상태
 name = 'paycis'; //string으로 값의 종류가 정해짐
-{% endhighlight}
+{% endhighlight %}
 
 5. 값이 없는(null) : 변수(바구니)를 만들고 `null`이라는 빈 값을 할당 한 경우
     * null은 객체형 데이터(값)의 빈값을 의미
