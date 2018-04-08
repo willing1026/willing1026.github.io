@@ -49,15 +49,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
 # List
 {% highlight markdown %}
 1. ordered item1<br>
- *test1<br>
- *test1-1<br>
-    1.test1-1-1
-    2.test1-1-2
- *test1-2
- *test1-3<br>
- *test1-3-1<br>
- *test1-3-1-1<br>
- *test1-3-1-1-1
+ * test1<br>
+ * test1-1<br>
+    1. test1-1-1
+    2. test1-1-2
+ * test1-2
+ * test1-3<br>
+ * test1-3-1<br>
+ * test1-3-1-1<br>
+ * test1-3-1-1-1
 2. ordered item2
 3. ordered item3
 
@@ -67,15 +67,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
 {% endhighlight %}
 
 1. ordered item1<br>
- *test1<br>
- *test1-1<br>
-    1.test1-1-1
-    2.test1-1-2
- *test1-2
- *test1-3<br>
- *test1-3-1<br>
- *test1-3-1-1<br>
- *test1-3-1-1-1
+ * test1<br>
+ * test1-1<br>
+    1. test1-1-1
+    2. test1-1-2
+ * test1-2
+ * test1-3<br>
+ * test1-3-1<br>
+ * test1-3-1-1<br>
+ * test1-3-1-1-1
 2. ordered item2
 3. ordered item3
 
