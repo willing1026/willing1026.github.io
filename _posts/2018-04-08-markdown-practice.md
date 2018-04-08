@@ -51,8 +51,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
 1. ordered item1<br>
  * test1<br>
  * test1-1<br>
-    1. test1-1-1
-    2. test1-1-2
+   1. test1-1-1
+   2. test1-1-2
+    
  * test1-2
  * test1-3<br>
  * test1-3-1<br>
@@ -69,8 +70,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt orna
 1. ordered item1<br>
  * test1<br>
  * test1-1<br>
-    1. test1-1-1
-    2. test1-1-2
+   1. test1-1-1
+   2. test1-1-2
+    
  * test1-2
  * test1-3<br>
  * test1-3-1<br>
