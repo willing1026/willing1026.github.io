@@ -23,7 +23,7 @@ tag: [리눅스,Apache]
 
 우선 간략하게 확인하는 방법은 `ps -ef |grep httpd` 명령어를 통해 확인이 가능하고, 상세하게 보기위해선 `systemctl -l status httpd`명령어를 통해 확인이 가능하다. 
 
-{% highlight linux %}
+{% highlight %}
 systemctl -l status httpd
 --위와같이 입력하면 아래와 비슷하게 상태를 확인할 수 있다 (문제가 있는경우엔 간략하게 원인이 나오고, 자세한건 로그를 통해 확인 가능하다)
 
