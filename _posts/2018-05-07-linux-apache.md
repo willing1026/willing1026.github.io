@@ -50,9 +50,11 @@ systemctl -l status httpd
 
 ### 정상적인 기동이 안되는 경우 에러 확인하기 (로그)
 위 명령어로 에러내용 확인이 가능하지만 세부적인 내용을 보기 위해선 로그파일을 확인해 볼 수 있다. 
+
 {% highlight %}
 cd /etc/httpd/logs
 vi error_log
 
 *ll -ltrh 를 통해 변경된 시간별로 파일을 정렬하고 맨 아래쪽에 있는 에러로그 파일을 열어본다.
 {% endhighlight %}
+
