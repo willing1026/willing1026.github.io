@@ -23,35 +23,16 @@ tag: [리눅스,Apache]
 
 ### httpd 실행상태 확인
 
-우선 간략하게 확인하는 방법은 `ps -ef |grep httpd` 명령어를 통해 확인이 가능하고, 상세하게 보기위해선 `systemctl -l status httpd`명령어를 통해 확인이 가능하다. 
-
-{% highlight %}
-systemctl -l status httpd
-//위와같이 입력하면 아래와 비슷하게 상태를 확인할 수 있다 (문제가 있는경우엔 간략하게 원인이 나오고, 자세한건 로그를 통해 확인 가능하다)
-
-● httpd.service - The Apache HTTP Server
-   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
-   Active: active (running) since 월 2018-05-07 00:02:22 KST; 3s ago
-     Docs: man:httpd(8)
-           man:apachectl(8)
-  Process: 1296 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
- Main PID: 4270 (httpd)
-   Status: "Processing requests..."
-   CGroup: /system.slice/httpd.service
-           ├─4270 /usr/sbin/httpd -DFOREGROUND
-           ├─4271 /usr/sbin/httpd -DFOREGROUND
-           ├─4272 /usr/sbin/httpd -DFOREGROUND
-           ├─4273 /usr/sbin/httpd -DFOREGROUND
-           ├─4274 /usr/sbin/httpd -DFOREGROUND
-           └─4275 /usr/sbin/httpd -DFOREGROUND
-
- 5월 07 00:02:21 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
- 5월 07 00:02:22 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
-
-{% endhighlight %}
+우선 간략하게 확인하는 방법은 `ps -ef |grep httpd` 명령어를 통해 확인이 가능하고, 상세하게 보기위해선 `systemctl -l status httpd`명령어를 통해 확인이 가능하다. 이와같이 입력하면 비슷하게 상태를 확인할 수 있다 (문제가 있는경우엔 간략하게 원인이 나오고, 자세한건 로그를 통해 확인 가능하다)
 
 ### 정상적인 기동이 안되는 경우 에러 확인하기 (로그)
 위 명령어로 에러내용 확인이 가능하지만 세부적인 내용을 보기 위해선 로그파일을 확인해 볼 수 있다. 
 
+{% highlight %}
+cd /etc/httpd/logs
+vi error_log
+
+//ll -ltrh 를 통해 변경된 시간별로 파일을 정렬하고 맨 아래쪽에 있는 에러로그 파일을 열어본다.
+{% endhighlight %}
 
 .
