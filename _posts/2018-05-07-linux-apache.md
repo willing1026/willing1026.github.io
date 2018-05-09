@@ -6,3 +6,55 @@ tag: [리눅스,Apache]
 ---
 
 순수한(?) 나머지 `아파치톰캣 = 톰캣`으로만 이해했었는데, 아파치와 톰캣을 연동한다는 얘기를 듣고 `??????` 무슨소리인지 이해가 안갔다. `아파치`는 웹서버이고 `톰캣`은 WAS(Web Application Server)이다. `아파치`는 정적인 데이터를 처리, 즉 상황에 따라 변하지 않는 단순한 결과를 응답하는데 사용되고 `WAS-톰캣`의 경우 사용자의 요청이나 상황에 따라 보여줘야 하는 데이터가 다른 경우를 처리한다. (ex> 입력한 전화번호에 따라 각각의 고객정보 응답) 
+
+그리고 아파치를 앞단에 두면 운영환경에서 여러서버에 동일한 WAS를 띄워 많은 요청을 각 WAS에 분산하는 `로드 밸런싱`이 가능하다. (아니면 호출URL을 보고 해당 WAS가 존재하는 서버로 보낼수 도 있다.)
+
+
+# Apache 설치하기
+
+여기서부터는 수워니님의 포스팅을 보고 진행했으며 막힌 부분과 어떻게 해결했는지 정리했습니다. (아무것도 몰랐는데 보면서 많은 도움을 받았습니다ㅠㅠ)
+
+[아파치 설치하기](https://suwoni-codelab.com/linux/2017/05/27/Linux-CentOS-Apache/)
+
+위의 포스팅에서 index.html을 만들어보는 과정은 넘겨도 큰 문제는 없습니다..
+
+### httpd 실행상태 확인
+
+우선 간략하게 확인하는 방법은 `ps -ef |grep httpd` 명령어를 통해 확인이 가능하고, 상세하게 보기위해선 `systemctl -l status httpd`명령어를 통해 확인이 가능하다. 
+
+{% highlight %}
+systemctl -l status httpd
+--위와같이 입력하면 아래와 비슷하게 상태를 확인할 수 있다 (문제가 있는경우엔 간략하게 원인이 나오고, 자세한건 로그를 통해 확인 가능하다)
+
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since 월 2018-05-07 00:02:22 KST; 3s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 1296 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+ Main PID: 4270 (httpd)
+   Status: "Processing requests..."
+   CGroup: /system.slice/httpd.service
+           ├─4270 /usr/sbin/httpd -DFOREGROUND
+           ├─4271 /usr/sbin/httpd -DFOREGROUND
+           ├─4272 /usr/sbin/httpd -DFOREGROUND
+           ├─4273 /usr/sbin/httpd -DFOREGROUND
+           ├─4274 /usr/sbin/httpd -DFOREGROUND
+           └─4275 /usr/sbin/httpd -DFOREGROUND
+
+ 5월 07 00:02:21 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+ 5월 07 00:02:22 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
+
+{% endhighlight %}
+
+### 정상적인 기동이 안되는 경우 에러 확인하기 (로그)
+위 명령어로 에러내용 확인이 가능하지만 세부적인 내용을 보기 위해선 로그파일을 확인해 볼 수 있다. 
+
+{% highlight %}
+cd /etc/httpd/logs
+vi error_log
+
+*ll -ltrh 를 통해 변경된 시간별로 파일을 정렬하고 맨 아래쪽에 있는 에러로그 파일을 열어본다.
+{% endhighlight %}
+
+.
