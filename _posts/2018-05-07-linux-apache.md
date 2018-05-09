@@ -47,10 +47,9 @@ systemctl -l status httpd
 
  5월 07 00:02:21 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
  5월 07 00:02:22 localhost.localdomain systemd[1]: Started The Apache HTTP Server.
-
 {% endhighlight %}
 
-### 정상적인 기동이 안되는 경우 에러 확인하기(로그)
+### 정상적인 기동이 안되는 경우 에러 확인하기
 위 명령어로 에러내용 확인이 가능하지만 세부적인 내용을 보기 위해선 로그파일을 확인해 볼 수 있다. 
 
 {% highlight %}
