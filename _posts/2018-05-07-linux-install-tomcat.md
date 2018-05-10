@@ -20,7 +20,7 @@ VirtualHost를 사용하지 않고 다르게 진행했습니다.
 
 httpd.conf 파일을 아래와 같이 수정했습니다.
 
-{% highlight %}
+{% highlight markdown %}
 ...
 
 # Example:
@@ -54,7 +54,7 @@ Include conf.modules.d/*.conf
 
 ### httpd 기동이 안될 때
 
-{% highlight %}
+{% highlight markdown %}
 Apr 14 13:35:03 ip-172-31-28-227.ap-northeast-2.compute.internal systemd[1]: Starting The Apache HTTP Server...
 Apr 14 13:35:03 ip-172-31-28-227.ap-northeast-2.compute.internal systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
 Apr 14 13:35:03 ip-172-31-28-227.ap-northeast-2.compute.internal kill[18250]: kill: cannot find process ""
@@ -66,7 +66,7 @@ Apr 14 13:35:03 ip-172-31-28-227.ap-northeast-2.compute.internal systemd[1]: htt
 
 `systemctl -l status httpd`로 상태확인을 했더니 위와같이 나온다면 아래처럼 Selinux설정을 반영하는 명령어를 추가로 입력하면 해결된다.
 
-{% highlight %}
+{% highlight markdown %}
 chcon -R --type=httpd_sys_rw_content_t /usr/share/tomcat/webapps/ROOT
 
 setenforce 0  //설정반영 - 추가입력
@@ -79,7 +79,7 @@ setenforce 0  //설정반영 - 추가입력
 
 > localhost.localdomain kill[1306]: kill: cannot find process ""
 
-{% highlight %}
+{% highlight markdown %}
 ● httpd.service - The Apache HTTP Server
    Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
    Active: failed (Result: exit-code) since 화 2018-05-08 01:48:50 KST; 8h left
@@ -101,7 +101,7 @@ setenforce 0  //설정반영 - 추가입력
 리눅스 서버를 다시 키면 위와같이 httpd 서비스가 정상동작하지 않는 문제가 생겨서 매번 Selinux 보안관련 설정 + setenforce 를 다시 한 뒤 재기동하면 해결됐는데, 정확한 원인을 찾기 위해 로그를 확인해봤다.
 
 
-{% highlight %}
+{% highlight markdown %}
 vi /etc/httpd/logs/error_log
 
 [Mon May 07 16:57:39.471984 2018] [jk:emerg] [pid 1042] Initializing shm:/etc/httpd/logs/jk-runtime-status.1042 errno=13. Unable to start due to shared memory failure.
