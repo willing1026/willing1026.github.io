@@ -33,7 +33,8 @@ tag: [리눅스,Apache]
 cd /etc/httpd/logs
 vi error_log
 
-ll -ltrh 를 통해 변경된 시간별로 파일을 정렬하고 맨 아래쪽에 있는 에러로그 파일을 열어본다.
+//ll -ltrh 를 통해 변경된 시간별로 파일을 정렬하고 
+//맨 아래쪽에 있는 에러로그 파일을 열어본다.
 
 {% endhighlight %}
 
