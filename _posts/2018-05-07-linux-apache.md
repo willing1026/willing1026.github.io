@@ -25,10 +25,11 @@ tag: [리눅스,Apache]
 
 우선 간략하게 확인하는 방법은 `ps -ef |grep httpd` 명령어를 통해 확인이 가능하고, 상세하게 보기위해선 `systemctl -l status httpd`명령어를 통해 확인이 가능하다.
 
+
 ### 정상적인 기동이 안되는 경우 에러 확인하기
 위 명령어로 에러내용 확인이 가능하지만 세부적인 내용을 보기 위해선 로그파일을 확인해 볼 수 있다. 
 
-{% highlight markdown %}
+{% highlight %}
 
 cd /etc/httpd/logs
 vi error_log
