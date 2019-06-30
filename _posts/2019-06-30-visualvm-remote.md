@@ -27,13 +27,13 @@ visualVM을 이용한 remote host 모니터링
     
 ### 모니터링용 테스트 파일 만들기
 * test파일 생성
-```
+{% highlight markdown linenos %}
 cd /home/test
 vi Hello.java
-```
+{% endhighlight %}
 
 * `hello` 라는 문구를 5초 단위로 출력하도록 설정
-```
+{% highlight java linenos %}
 public class Hello {
     public static void main(String[] args) throws Exception {
         while(Boolean.TRUE) {
@@ -42,14 +42,15 @@ public class Hello {
         }
     }
 }
-```
+{% endhighlight %}
 * 컴파일 : `javac Hello.java`
 * Hello.class 파일 생성 확인
 
 ### 모니터링용 테스트 파일 실행
 * JMX Remote 설정을 추가한 실행 스크립트 생성 : `vi run.sh`
 * 실행 스크립트 입력
-```
+
+{% highlight markdown linenos %}
 # !/bin/bash
 
 # -Dcom.sun.management.jmxremote.local.only=false : localOnly가 true 켜져있으면 remote 연결이 안될 수 있다.
@@ -60,7 +61,7 @@ public class Hello {
 # -Dcom.sun.management.jmxremote.rmi.port=1099 : rmi포트 설정
 
 java -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote -Djava.rmi.server.hostname=192.168.0.7 -Dcom.sun.management.jmxremote.rmi.port=1099 Hello
-```
+{% endhighlight %}
 
 * 쉘 스크립트 권한 설정 : `chmod 777 run.sh`
 * 쉘 스크립트 실행 : ./run.sh
