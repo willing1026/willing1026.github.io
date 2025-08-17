@@ -1,3 +1,10 @@
+---
+layout: post
+title: Korean Baby Name Trends in 2025
+author: "Paycis"
+tags: [koreanName]
+---
+
 # Korean Baby Name Trends in 2025
 
 Korean parents are choosing baby names that are modern, unique, and meaningful.  
