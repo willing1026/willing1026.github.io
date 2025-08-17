@@ -2,7 +2,7 @@
 layout: post
 title: The Cultural Meaning of Korean Names: A Guide for Foreigners
 author: "Paycis"
-tags: [koreanName][culture]
+tags: [koreanName]
 ---
 
 # The Cultural Meaning of Korean Names: A Guide for Foreigners
