@@ -3,8 +3,6 @@ layout: post
 title: How to Convert an English Name into a Korean Name
 author: "Paycis"
 tags: [koreanName]
-description: "Learn how to convert English names into natural Korean names, with real examples and a free Korean name generator."
-date: 2025-08-17
 ---
 
 ## Want to change your English name into Korean?
