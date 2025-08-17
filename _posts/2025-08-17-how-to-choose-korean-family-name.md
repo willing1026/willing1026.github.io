@@ -1,3 +1,10 @@
+---
+layout: post
+title: How to Choose a Korean Family Name as a Foreigner
+author: "Paycis"
+tags: [koreanName]
+---
+
 # How to Choose a Korean Family Name as a Foreigner
 
 In Korea, the family name (성, Seong) is very important.  
