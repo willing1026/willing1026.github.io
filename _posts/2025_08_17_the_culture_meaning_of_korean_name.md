@@ -1,3 +1,10 @@
+---
+layout: post
+title: The Cultural Meaning of Korean Names: A Guide for Foreigners
+author: "Paycis"
+tags: [koreanName][culture]
+---
+
 # The Cultural Meaning of Korean Names: A Guide for Foreigners
 
 Choosing a Korean name is more than just translating sounds from English.  
