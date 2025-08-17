@@ -5,7 +5,9 @@ description:    "Minimal Jekyll theme for storytellers"
 url:            "https://willing1026.github.io"
 
 # google analytics
-google_analytics_id: UA-113210161-1
+# google_analytics_id: UA-113210161-1
+
+timezone: Asia/Seoul
 
 # Author
 author:
@@ -24,6 +26,8 @@ sass:
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
